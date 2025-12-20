@@ -30,18 +30,7 @@
       --max-width: 1120px;
     }
 
-    /* Light theme overrides */
-    html.light-theme {
-      --bg-gradient: radial-gradient(circle at top, #f9fafb, #e5e7eb, #d1d5db);
-      --card-bg: rgba(255, 255, 255, 0.9);
-      --glass-border: 1px solid rgba(148, 163, 184, 0.45);
-      --accent: #ec4899;
-      --accent-2: #0ea5e9;
-      --text-main: #111827;
-      --text-muted: #4b5563;
-      --shadow-soft: 0 16px 36px rgba(15, 23, 42, 0.18);
-    }
-
+ 
     /* Neon theme overrides */
     html.neon-theme {
       --bg-gradient: linear-gradient(145deg, #18002a, #40065c, #7d0070);
@@ -769,6 +758,10 @@
       gap: 18px;
       align-items: stretch;
     }
+.contact-form {
+  position: relative;
+  z-index: 10;
+}
 
     .contact-form {
       display: flex;
@@ -1370,7 +1363,7 @@
                 data-exp-img="assets/media/cert-theta.png"
                 data-exp-caption="Information Security Internship certificate - Greytha Information Security Pvt. Ltd"
               >
-                📜 View certificate
+                
               </button>
             </article>
 
@@ -1388,7 +1381,7 @@
                 data-exp-img="assets/media/cert-aws.png"
                 data-exp-caption="AWS Cloud DevOps Internship certificate"
               >
-                📜 View certificate
+               
               </button>
             </article>
 
@@ -1406,7 +1399,7 @@
                 data-exp-img="assets/media/cert-steg.png"
                 data-exp-caption="Steganography internship certificate"
               >
-                📜 View certificate
+                
               </button>
             </article>
 
@@ -1424,7 +1417,7 @@
                 data-exp-img="assets/media/cert-web.png"
                 data-exp-caption="Web development internship certificate"
               >
-                📜 View certificate
+              
               </button>
             </article>
           </div>
@@ -1449,7 +1442,7 @@
                 <li>Integrated CRC checks and redundancy to ensure reliable decoding with minimal distortion.</li>
               </ul>
               <button class="btn btn-ghost btn-small" type="button" data-project="steg">
-                🔍 View details
+               
               </button>
             </article>
 
@@ -1464,7 +1457,7 @@
                 <li>Implemented PO analytics and interactive visual reports; deployed on the college intranet.</li>
               </ul>
               <button class="btn btn-ghost btn-small" type="button" data-project="exit">
-                🔍 View details
+               
               </button>
             </article>
 
@@ -1479,7 +1472,7 @@
                 <li>Used SHA-256 integrity checks and key rotation for confidential, tamper-proof communication.</li>
               </ul>
               <button class="btn btn-ghost btn-small" type="button" data-project="chat">
-                🔍 View details
+               
               </button>
             </article>
           </div>
@@ -1522,7 +1515,7 @@
                   data-exp-img="assets/media/exit-survey-ui.png"
                   data-exp-caption="Student Exit Survey dashboard UI"
                 >
-                  🔍 View dashboard image
+                  
                 </button>
               </div>
             </article>
@@ -1724,7 +1717,7 @@
         <div class="settings-title">Theme (auto changes every 5s)</div>
         <div class="settings-options">
           <button class="settings-chip" data-set-theme="dark">🌙 Dark</button>
-          <button class="settings-chip" data-set-theme="light">☀️ Light</button>
+
           <button class="settings-chip" data-set-theme="blue">🌊 Blue</button>
           <button class="settings-chip" data-set-theme="neon">⚡ Neon</button>
           <button class="settings-chip" data-set-theme="orange">🔥 Orange</button>
@@ -1751,7 +1744,7 @@
     const THEME_KEY = "kk-portfolio-theme";
     const FONT_KEY = "kk-portfolio-font";
     const ANIM_KEY = "kk-portfolio-anim";
-    const THEME_SEQUENCE = ["dark", "light", "blue", "neon", "orange"];
+    const THEME_SEQUENCE = ["dark", "blue", "neon", "orange"];
 
     // Dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -1859,8 +1852,9 @@
 
     // Typing animation for role
     const roles = [
-      "Software Engineer — Intern",
-      "Cloud · Web · Security · AI",
+      "Software Engineer",
+      "Web Development",
+      "Cloud · Security · AI",
       "Building secure, scalable systems"
     ];
     const typingSpan = document.getElementById("role-typing");
